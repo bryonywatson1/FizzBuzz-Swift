@@ -10,4 +10,10 @@ import Foundation
 
 class Game: NSObject {
     
+    var score: Int
+    
+    override init() {
+     score = 0
+     super.init()
+    }
 }
