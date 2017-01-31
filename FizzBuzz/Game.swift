@@ -19,7 +19,7 @@ class Game: NSObject {
      super.init()
     }
     
-    func play(input: String) -> (right: Bool, score: Int) {
+    func play(input: Move) -> (right: Bool, score: Int) {
     let result = brain.check(number: score + 1)
         
         if result == input {

@@ -59,25 +59,25 @@ class BrainTests: XCTestCase {
     func testReturnsFizz() {
         let brain = Brain()
         let result = brain.check(number: 3)
-        XCTAssertEqual(result, "Fizz")
+        XCTAssertEqual(result, Move.Fizz)
     }
     
     func testReturnsBuzz() {
         let brain = Brain()
         let result = brain.check(number: 5)
-        XCTAssertEqual(result, "Buzz")
+        XCTAssertEqual(result, Move.Buzz)
     }
     
     func testReturnsFizzBuzz() {
         let brain = Brain()
         let result = brain.check(number: 15)
-        XCTAssertEqual(result, "FizzBuzz")
+        XCTAssertEqual(result, Move.FizzBuzz)
     }
     
     func testReturnsNumber() {
         let brain = Brain()
         let result = brain.check(number:14)
-        XCTAssertEqual(result, "14")
+        XCTAssertEqual(result, Move.Number)
     }
     
   
