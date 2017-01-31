@@ -36,6 +36,7 @@ class ViewControllerUITests: XCTestCase {
         XCTAssertEqual(newScore, "1")
     }
     
+    
     func testTapNumberButtonIncrementsScoreBy2() {
         let app = XCUIApplication()
         let numberButton = app.buttons["numberButton"]
@@ -45,4 +46,62 @@ class ViewControllerUITests: XCTestCase {
         XCTAssertEqual(newScore, "2")
     }
     
+    func testTapFizzButtonIncrementsTo3() {
+        let app = XCUIApplication()
+        let numberButton = app.buttons["numberButton"]
+        let fizzButton = app.buttons["fizzButton"]
+        
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        let newScore = numberButton.label
+        XCTAssertEqual(newScore, "3")
+    }
+    
+    func testTapBuzzButtonIncrementsTo5() {
+        let app = XCUIApplication()
+        let numberButton = app.buttons["numberButton"]
+        let buzzButton = app.buttons["buzzButton"]
+        let fizzButton = app.buttons["fizzButton"]
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        buzzButton.tap()
+        let newScore = numberButton.label
+        XCTAssertEqual(newScore, "5")
+    }
+    
+    func playTo14() {
+        let app = XCUIApplication()
+        let numberButton = app.buttons["numberButton"]
+        let fizzButton = app.buttons["fizzButton"]
+        let buzzButton = app.buttons["buzzButton"]
+        
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        buzzButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        buzzButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        numberButton.tap()
+    }
+    
+    func testTapFizzBuzzButtonIncrementsTo15() {
+        playTo14()
+        let app = XCUIApplication()
+        let numberButton = app.buttons["numberButton"]
+        let fizzBuzzButton = app.buttons["fizzBuzzButton"]
+        fizzBuzzButton.tap()
+        let newScore = numberButton.label
+        XCTAssertEqual(newScore, "15")
+    }
+
 }
