@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,9 +39,52 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQC-Bg-QZ9">
                                 <rect key="frame" x="56" y="202" width="263" height="263"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0E6-h8-nVI">
+                                        <rect key="frame" x="0.0" y="0.0" width="126.5" height="126.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="70"/>
+                                        <state key="normal" title="0" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rc0-hj-tAm">
+                                        <rect key="frame" x="137" y="0.0" width="126" height="126"/>
+                                        <state key="normal" image="champagne" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ji2-bf-6OH">
+                                        <rect key="frame" x="137" y="137" width="126" height="126"/>
+                                        <state key="normal" image="space" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEO-vb-kJ2">
+                                        <rect key="frame" x="0.0" y="137" width="126" height="126"/>
+                                        <state key="normal" image="lightning" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IQC-Bg-QZ9" secondAttribute="height" multiplier="1:1" id="0Ga-UP-Go6"/>
+                                    <constraint firstItem="Rc0-hj-tAm" firstAttribute="height" secondItem="IQC-Bg-QZ9" secondAttribute="height" multiplier="0.48" id="13L-3x-Hha"/>
+                                    <constraint firstItem="0E6-h8-nVI" firstAttribute="width" secondItem="IQC-Bg-QZ9" secondAttribute="width" multiplier="0.48" id="4Sc-NM-GYv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ji2-bf-6OH" secondAttribute="bottom" id="LeM-V5-Tc1"/>
+                                    <constraint firstAttribute="bottom" secondItem="cEO-vb-kJ2" secondAttribute="bottom" id="MZU-LC-bde"/>
+                                    <constraint firstItem="cEO-vb-kJ2" firstAttribute="height" secondItem="IQC-Bg-QZ9" secondAttribute="height" multiplier="0.48" id="Txt-HP-QWO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ji2-bf-6OH" secondAttribute="trailing" id="UZo-vw-pJg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rc0-hj-tAm" secondAttribute="trailing" id="YFW-U8-FfJ"/>
+                                    <constraint firstItem="0E6-h8-nVI" firstAttribute="height" secondItem="IQC-Bg-QZ9" secondAttribute="height" multiplier="0.48" id="Yvz-VZ-2rg"/>
+                                    <constraint firstItem="0E6-h8-nVI" firstAttribute="leading" secondItem="IQC-Bg-QZ9" secondAttribute="leading" id="bts-3e-6dn"/>
+                                    <constraint firstItem="cEO-vb-kJ2" firstAttribute="leading" secondItem="IQC-Bg-QZ9" secondAttribute="leading" id="czg-NR-45B"/>
+                                    <constraint firstItem="Ji2-bf-6OH" firstAttribute="height" secondItem="IQC-Bg-QZ9" secondAttribute="height" multiplier="0.48" id="gHo-pd-cDa"/>
+                                    <constraint firstItem="Rc0-hj-tAm" firstAttribute="width" secondItem="IQC-Bg-QZ9" secondAttribute="width" multiplier="0.48" id="hK3-Km-aOO"/>
+                                    <constraint firstItem="Rc0-hj-tAm" firstAttribute="top" secondItem="IQC-Bg-QZ9" secondAttribute="top" id="l30-Xt-59n"/>
+                                    <constraint firstItem="cEO-vb-kJ2" firstAttribute="width" secondItem="IQC-Bg-QZ9" secondAttribute="width" multiplier="0.48" id="nmo-h7-cAg"/>
+                                    <constraint firstItem="Ji2-bf-6OH" firstAttribute="width" secondItem="IQC-Bg-QZ9" secondAttribute="width" multiplier="0.48" id="npQ-J0-qrl"/>
+                                    <constraint firstItem="0E6-h8-nVI" firstAttribute="top" secondItem="IQC-Bg-QZ9" secondAttribute="top" id="ug3-uR-PNz"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -61,4 +105,10 @@
             <point key="canvasLocation" x="-397.65625" y="40.4296875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_border" width="400" height="400"/>
+        <image name="champagne" width="49" height="50"/>
+        <image name="lightning" width="29" height="50"/>
+        <image name="space" width="47" height="50"/>
+    </resources>
 </document>
